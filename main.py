@@ -1,17 +1,21 @@
 import ru_local as ru
+
 print(ru.WRITE_THE_COUNT_OF_DAYS)
+
 count_days = float(input())
-distance_miles = 16637000000
-speed_miles = 38241
-radio_waves_speed_meter = 299792458
-au_in_meters = 149597870700
-current_distance = count_days * 24 * speed_miles + distance_miles
-number_of_miles = current_distance
-numbers_of_kilometers = number_of_miles * 1.61
-numbers_of_au = numbers_of_kilometers * 1000 / au_in_meters
-delay_in_seconds = numbers_of_kilometers * 1000 / radio_waves_speed_meter
-delay_in_hours = delay_in_seconds / 3600
-print(ru.NUMBER_OF_MILES, number_of_miles)
-print(ru.NUMBER_OF_KILOMETERS, numbers_of_kilometers)
-print(ru.NUMBER_OF_AU, numbers_of_au)
-print(ru.DELAY_IN_HOURS, delay_in_hours)
+dist_miles = 16_637_000_000
+spd_miles = 38_241
+waves_spd_meter = 299_792_458
+au_in_meters = 149_597_870_700
+
+current_dist = count_days * 24 * spd_miles + dist_miles
+number_miles = current_dist
+numbers_km = number_miles * 1.61
+numbers_au = numbers_km * 1000 / au_in_meters
+delay_seconds = numbers_km * 1000 / waves_spd_meter
+delay_hours = delay_seconds / 3600
+
+print(ru.NUMBER_MILES, number_miles)
+print(ru.NUMBER_KM, numbers_km)
+print(ru.NUMBER_AU, numbers_au)
+print(ru.DELAY_HOURS, delay_hours)
